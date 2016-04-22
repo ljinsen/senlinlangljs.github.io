@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Controller  Guide</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/docs.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/doc.js"></script>
+                <script src="js/highlight.pack.js"></script>
+                <script>
+			hljs.tabReplace = ' ';
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+<body data-spy="scroll" onload="prettyPrint();" data-target="#ym-navbar">
+
+<div class="header navbar-inner">
+<div class="container clearfix">
+<span class="pull-left brand">Controller</span>
+</div>
+</div>
+
+<div class="doc-content">
+<!--Body content-->
+<h1 class="sdkhead" id="section_sdk">Controller  Guide</h1>
+<h2 class="sdkhead" id="section_preface">Preface</h2>
+<h3 class="sdkhead" id="section_preface_desc">1.Instruction</h3>
+<p>We add some API to the framework.jar to control the led,fan and the other devices.If you use these API in your project,you need to reference framework.jar on your project. You can look at the project ControllerDemo for a example.  </p>
+<h3 class="sdkhead" id="section_preface_overview">2.Function Overview</h3>
+<ul>
+<li>Open or close the LED   </li>
+<li>Open or close the relay  </li>
+<li>Open or close the fan </li>
+<li>Open or close the heater </li>
+<li>Enable the ZigBee reset</li>
+<li>Get the state of relay</li>
+<li>Get the state of thermostat</li>
+<li>Get the state of pepi sensor</li>
+<li>Get the state of SIM1</li>
+<li>Get the value of ADC</li>
+</ul>
+
+<h2 class="sdkhead" id="section_ready">I.Preparation</h2>
+<h3 class="sdkhead" id="section_ready_import_sdk">1.Reference framework.jar</h3>
+<p>Reference framework.jar to your project (Eclipse).  </p>
+<blockquote>
+<p>
+1). Right click on your project, select "Build Path" and then choose "Configure Build Path...."<br />
+2). Libraries -> Add External JARs... -> Select this jar file -> OK<br />
+3). Order and Export -> Select these two jar files -> Top -> OK  <br/>
+4). Successfully imported  </p>
+</blockquote>
+
+<h2 class="sdkhead" id="section_ad">II.Invoke methods</h2>
+<h3 class="sdkhead" id="section_spot">1. setLED(boolean on,int which);</h3>
+<blockquote>
+<p>Open or close the LED</p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.setLED(on,which);
+</code></pre>
+Parameter: which
+<pre><code class="prettyprint lang-xml">
+PowerManager.LED_1 = 0;
+PowerManager.LED_2 = 1;
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">2.switchRelay(boolean on,int which)</h3>
+<blockquote>
+<p> Open or close the relay </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.switchRelay(on,which);
+</code></pre>
+Parameter: on
+<pre><code class="prettyprint lang-xml">
+PowerManager.ENERGIZE = false;
+PowerManager.DEENERGIZE = ture;
+</code></pre>
+</code></pre>
+Parameter: which
+<pre><code class="prettyprint lang-xml">
+PowerManager.RELAY_1 = 0;
+PowerManager.RELAY_2 = 1;
+PowerManager.RELAY_3 = 2;
+PowerManager.RELAY_4 = 3;
+PowerManager.RELAY_5 = 4;
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">3.setFan(boolean on)</h3>
+<blockquote>
+<p> Open or close the fan </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.setFan(on);
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">4.setHeater(boolean on)</h3>
+<blockquote>
+<p> Open or close the heater </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.setHeater(on);
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">5.setZigBeeReset(boolean on)</h3>
+<blockquote>
+<p> Enable the ZigBee reset </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.setZigBeeReset(on);
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">6.getRelayState(int which)</h3>
+<blockquote>
+<p> Get the state of relay </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.getRelayState(which);
+</code></pre>
+Parameter: which
+<pre><code class="prettyprint lang-xml">
+PowerManager.RELAY_1 = 0;
+PowerManager.RELAY_2 = 1;
+PowerManager.RELAY_3 = 2;
+PowerManager.RELAY_4 = 3;
+PowerManager.RELAY_5 = 4;
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">7.getThermostatState(int which)</h3>
+<blockquote>
+<p> Get the state of thermostat </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.getThermostatState(which);
+</code></pre>
+Parameter: which
+<pre><code class="prettyprint lang-xml">
+PowerManager.THERMOSTAT_1 = 0;
+PowerManager.THERMOSTAT_2 = 1;
+PowerManager.THERMOSTAT_3 = 2;
+PowerManager.THERMOSTAT_4 = 3;
+PowerManager.THERMOSTAT_5 = 4;
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">8.getPepiSensorState()</h3>
+<blockquote>
+<p> Get the state of pepi sensor </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.getPepiSensorState();
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">9.getSIM1State()</h3>
+<blockquote>
+<p> Get the state of SIM1 </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.getSIM1State();
+</code></pre>
+
+<h3 class="sdkhead" id="section_banner">9.getADCValue(int which)</h3>
+<blockquote>
+<p> Get the value of ADC </p>
+</blockquote>
+Method:
+<pre><code class="prettyprint lang-xml">
+mPowerManagerService.getADCValue(which);
+</code></pre>
+Parameter: which
+<pre><code class="prettyprint lang-xml">
+PowerManager.HWMON0_IN0_INPUT = 0;
+PowerManager.HWMON0_IN1_INPUT = 1;
+PowerManager.HWMON0_IN2_INPUT = 2;
+PowerManager.HWMON0_IN3_INPUT = 3;
+PowerManager.AIR_TEMP_1 = 4;
+PowerManager.AIR_TEMP_2 = 5;
+PowerManager.AIR_TEMP_3 = 6;
+PowerManager.PWR_VOLTAGE = 7;
+PowerManager.HWMON1_IN0_INPUT1 = 10;
+PowerManager.HWMON1_IN1_INPUT1 = 11;
+PowerManager.HWMON1_IN2_INPUT1 = 12;
+PowerManager.HWMON1_IN3_INPUT1 = 13;
+//PowerManager.CURRENT = 14; //del
+PowerManager.TEMP_EXT = 15;
+PowerManager.HWMON0_IN6_INPUT = 16;
+PowerManager.TEMP_INT = 17;
+PowerManager.CT_ADC = 24; //new
+</code></pre>
+
+</div>
+
+</body>
+</html>
