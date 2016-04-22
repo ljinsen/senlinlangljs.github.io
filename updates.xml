@@ -1,5 +1,5 @@
 <update>
-	<update_date>2016-04-22</update_date>
-	<update_size>200</update_size>
-	<update_path>http://teleepoch.github.io/UpdateTest.apk</update_path>
+	<data>2016-04-22</data>
+	<data>200</data>
+	<data>http://teleepoch.github.io/UpdateTest.apk</data>
 </update>
