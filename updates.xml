@@ -1,15 +1,6 @@
 <update>
-	<version>
-		<data>33</data>
-	</version>
-	<file>
-		<data>UpdateTest.apk</data>
-	</file>
-	<description>
-		<data>update test</data>
-	</description>
-	<delta>
-		<from>123</from>
-		<to>43535</to>
-	</delta>
+	<version data="33" />
+	<file data="UpdateTest.apk" />
+	<description data="update test" />
+	<delta from="123" to="43535"/>
 </update>
