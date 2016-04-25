@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <update>
-	<version>22</version>
-	<file>UpdateTest.apk</file>
-	<description>update test</description>
-	<delta>dfef</delta>
+	<version>
+		<data>33</data>
+	</version>
+	<file>
+		<data>UpdateTest.apk</data>
+	</file>
+	<description>
+		<data>update test</data>
+	</description>
+	<delta>
+		<from>123</from>
+		<to>43535</to>
+	</delta>
 </update>
