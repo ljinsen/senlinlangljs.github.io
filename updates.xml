@@ -1,6 +1,6 @@
 <update>
-	<version data="33" />
+	<version data="G7810_01.01.01.45532" />
 	<file data="UpdateTest.apk" />
 	<description data="update test" />
-	<delta from="123" to="43535"/>
+	<delta from="G7810_01.01.01.191319" to="G7810_01.01.01.45532"/>
 </update>
