@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <update>
-	<date>2016-04-22</date>
-	<size>200</size>
-	<path>http://teleepoch.github.io/UpdateTest.apk</path>
+	<version>22</version>
+	<file>UpdateTest.apk</file>
+	<description>update test</description>
+	<delta>dfef</delta>
 </update>
