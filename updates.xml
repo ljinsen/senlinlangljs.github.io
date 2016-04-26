@@ -2,17 +2,5 @@
 	<version data="G7810_01.01.01.45532" />
 	<file data="UpdateTest.apk" />
 	<description data="update test" />
-</update>
-
-<update>
-	<version data="G7810_01.01.01.45532" />
-	<file data="msm8909-ota-152257.zip" />
-	<description data="update test" />
-</update>
-
-<update>
-	<version data="G7810_01.01.01.45532" />
-	<file data="UpdateTest.apk" />
-	<description data="update test" />
-	<delta from="191319" to="45532"/>
+	<!--<delta from="191319" to="45532"/>-->
 </update>
