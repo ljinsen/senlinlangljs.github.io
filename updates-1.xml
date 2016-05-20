@@ -1,0 +1,20 @@
+<updates>
+	<update>
+        	<version>G7810_01.01.01.45532<version/>
+        	<file>"UpdateTest.apk<file/>
+        	<description>update test<description/>
+        </update>
+        
+        <update>
+        	<version>G7810_01.01.01.45532<version/>
+        	<file>msm8909-ota-152257.zip<file/>
+        	<description>update test<description/>
+        </update>
+        
+        <update>
+        	<version>G7810_01.01.01.45532<version/>
+        	<file>UpdateTest.apk<file/>
+        	<description>update test<description/>
+        	<delta>from="191319" to="45532<delta/>
+        </update>
+</updates>
