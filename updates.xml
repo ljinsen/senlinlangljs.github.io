@@ -21,5 +21,11 @@
         	<file data="UpdateTest.apk" />
         	<description data="update test" />
         </update>
+        
+        <update>
+        	<version data="U673C_01.01.02.122146" />
+        	<file data="UpdateTest.apk" />
+        	<description data="the last file" />
+        </update>
 </updates>
 
